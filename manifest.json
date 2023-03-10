@@ -1,10 +1,17 @@
 {
-    "name": "3Bold",
-    "description": "Base Level Extension",
-    "version": "1.0",
-    "manifest_version": 3,
-    "action": {
-      "default_popup": "3Bold.html",
-      "default_icon": "extension.png"
+  "manifest_version": 3,
+  "name": "Bold First Letters",
+  "version": "1.0",
+  "description": "Select text and make the first letter of each word bold",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
     }
+  ],
+  "action": {
+    "default_popup": "3Bold.html",
+    "default_icon": "extension.png"
   }
+}
